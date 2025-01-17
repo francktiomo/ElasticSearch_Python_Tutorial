@@ -32,5 +32,5 @@ async def search(search_query: str, skip: int = 0, limit: int = 10) -> dict:
     )
     hits=response['hits']['hits']
     return {
-        'hits': hits
+        'hits': hits 
     }
