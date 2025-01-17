@@ -8,7 +8,6 @@ def get_es_client(max_retries: int = 5, sleep_time: int = 5) -> Elasticsearch:
     while i < max_retries:
         try:
             es = Elasticsearch('http://localhost:9200')
-            client_info = es.info()
             pprint('Connected to Elasticsearch')
             return es
         except Exception:
